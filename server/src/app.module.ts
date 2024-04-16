@@ -10,13 +10,15 @@ import { JwtAuthGuard } from './auth/guards/jwt-auth.guard';
 import { MulterModule } from '@nestjs/platform-express';
 import { FileController } from './files.controller';
 import { ClinicsModule } from './clinics/clinics.module';
+import { ServicesModule } from './services/services.module';
 
 @Module({
   imports: [UserModule, PrismaModule, AuthModule,
     MulterModule.register({
       dest: './uploads',
     }),
-    ClinicsModule],
+    ClinicsModule,
+    ServicesModule],
   controllers: [AppController, FileController],
   providers: [
     AppService,
