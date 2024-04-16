@@ -11,6 +11,7 @@ import { MulterModule } from '@nestjs/platform-express';
 import { FileController } from './files.controller';
 import { ClinicsModule } from './clinics/clinics.module';
 import { ServicesModule } from './services/services.module';
+import { BookingsModule } from './bookings/bookings.module';
 
 @Module({
   imports: [UserModule, PrismaModule, AuthModule,
@@ -18,7 +19,8 @@ import { ServicesModule } from './services/services.module';
       dest: './uploads',
     }),
     ClinicsModule,
-    ServicesModule],
+    ServicesModule,
+    BookingsModule],
   controllers: [AppController, FileController],
   providers: [
     AppService,
