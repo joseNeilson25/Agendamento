@@ -7,7 +7,7 @@ import { IsPublic } from 'src/auth/decorators/is-public.decorator';
 
 @IsPublic()
 @ApiTags('users')
-@Controller('user')
+@Controller('users')
 export class UserController {
   constructor(private readonly userService: UserService) {}
 

@@ -8,14 +8,14 @@ import {
     Param,
     Res,
   } from '@nestjs/common';
-  import { IsPublic } from './auth/decorators/is-public.decorator';
-  import { FileInterceptor } from '@nestjs/platform-express';
-  import { diskStorage } from 'multer';
-  import { extname } from 'path';
-  import { createReadStream } from 'fs';
   import { join } from 'path';
+  import { extname } from 'path';
   import { Response } from 'express';
+  import { diskStorage } from 'multer';
+  import { createReadStream } from 'fs';
   import { ApiTags } from '@nestjs/swagger';
+  import { FileInterceptor } from '@nestjs/platform-express';
+  import { IsPublic } from './auth/decorators/is-public.decorator';
   
   @IsPublic()
   @ApiTags('file')

@@ -1,5 +1,5 @@
-import { Controller } from '@nestjs/common';
 import { AppService } from './app.service';
+import { Controller } from '@nestjs/common';
 import { PrismaService } from './database/pisma.service';
 import { IsPublic } from './auth/decorators/is-public.decorator';
 

@@ -1,17 +1,17 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
-import { PrismaService } from './database/pisma.service';
-import { UserModule } from './user/user.module';
-import { PrismaModule } from './prisma/prisma.module';
-import { AuthModule } from './auth/auth.module';
 import { APP_GUARD } from '@nestjs/core';
-import { JwtAuthGuard } from './auth/guards/jwt-auth.guard';
-import { MulterModule } from '@nestjs/platform-express';
+import { AppService } from './app.service';
+import { AuthModule } from './auth/auth.module';
+import { UserModule } from './user/user.module';
+import { AppController } from './app.controller';
 import { FileController } from './files.controller';
+import { PrismaModule } from './prisma/prisma.module';
+import { MulterModule } from '@nestjs/platform-express';
+import { PrismaService } from './database/pisma.service';
 import { ClinicsModule } from './clinics/clinics.module';
-import { ServicesModule } from './services/services.module';
 import { BookingsModule } from './bookings/bookings.module';
+import { JwtAuthGuard } from './auth/guards/jwt-auth.guard';
+import { ServicesModule } from './services/services.module';
 
 @Module({
   imports: [UserModule, PrismaModule, AuthModule,

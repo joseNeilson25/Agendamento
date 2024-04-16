@@ -1,9 +1,9 @@
+import { Prisma } from '@prisma/client';
 import { Injectable } from '@nestjs/common';
+import { Clinic } from './entities/clinic.entity';
+import { PrismaService } from 'src/database/pisma.service';
 import { CreateClinicDto } from './dto/create-clinic.dto';
 import { UpdateClinicDto } from './dto/update-clinic.dto';
-import { PrismaService } from 'src/database/pisma.service';
-import { Prisma } from '@prisma/client';
-import { Clinic } from './entities/clinic.entity';
 
 @Injectable()
 export class ClinicsService {

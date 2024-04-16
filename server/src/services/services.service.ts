@@ -1,9 +1,9 @@
+import { Prisma } from '@prisma/client';
 import { Injectable } from '@nestjs/common';
+import { Service } from './entities/service.entity';
+import { PrismaService } from 'src/database/pisma.service';
 import { CreateServiceDto } from './dto/create-service.dto';
 import { UpdateServiceDto } from './dto/update-service.dto';
-import { Prisma } from '@prisma/client';
-import { PrismaService } from 'src/database/pisma.service';
-import { Service } from './entities/service.entity';
 
 @Injectable()
 export class ServicesService {

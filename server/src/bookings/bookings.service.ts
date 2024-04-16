@@ -1,9 +1,9 @@
+import { Prisma } from '@prisma/client';
 import { Injectable } from '@nestjs/common';
+import { Booking } from './entities/booking.entity';
+import { PrismaService } from 'src/database/pisma.service';
 import { CreateBookingDto } from './dto/create-booking.dto';
 import { UpdateBookingDto } from './dto/update-booking.dto';
-import { Prisma } from '@prisma/client';
-import { PrismaService } from 'src/database/pisma.service';
-import { Booking } from './entities/booking.entity';
 
 @Injectable()
 export class BookingsService {
@@ -40,5 +40,4 @@ export class BookingsService {
       where: { id },
     });
   }
-
 }
