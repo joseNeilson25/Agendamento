@@ -37,6 +37,11 @@ export class ServicesController {
     return this.servicesService.getServiceById(id);
   }
 
+  @Get('service-clinic/:clinicId')
+  getServiceByClinicId(@Param('clinicId') userId: string): Promise<Service[]> {
+   return this.servicesService.getServiceByClinicId(userId);
+  }
+
   @Put(':id')
   update(
     @Param('id') id: string,

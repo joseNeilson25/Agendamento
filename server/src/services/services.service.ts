@@ -25,6 +25,12 @@ export class ServicesService {
     });
   }
 
+  async getServiceByClinicId(clinicId: string): Promise<Service[]> {
+    return this.prisma.service.findMany({
+      where: { clinicId },
+    });
+  }
+
   async updateService(
     id: string,
     data: Prisma.ServiceUpdateInput,
